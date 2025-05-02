@@ -3,3 +3,4 @@ from app.models.user import User
 
 class UserDTO(SQLAlchemyDTO[User]):
     pass
+    #exclude = {"password"}
