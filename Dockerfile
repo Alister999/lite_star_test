@@ -13,4 +13,4 @@ RUN poetry install --no-root --no-interaction --no-ansi
 COPY . .
 EXPOSE 8000
 
-CMD ["poetry", "run", "litestar", "run", "--reload", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["poetry", "run", "litestar", "--app", "app.main:app", "run", "--reload", "--host", "0.0.0.0", "--port", "8000"]
